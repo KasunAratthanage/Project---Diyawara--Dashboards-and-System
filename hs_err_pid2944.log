@@ -1,0 +1,161 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=2944, tid=7764
+#
+# JRE version:  (8.0_66-b17) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002a2d800):  JavaThread "Unknown thread" [_thread_in_vm, id=7764, stack(0x0000000002920000,0x0000000002a20000)]
+
+Stack: [0x0000000002920000,0x0000000002a20000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002a2d800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7764, stack(0x0000000002920000,0x0000000002a20000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 28672K, used 491K [0x00000000e0980000, 0x00000000e2980000, 0x0000000100000000)
+  eden space 24576K, 2% used [0x00000000e0980000,0x00000000e09fae20,0x00000000e2180000)
+  from space 4096K, 0% used [0x00000000e2580000,0x00000000e2580000,0x00000000e2980000)
+  to   space 4096K, 0% used [0x00000000e2180000,0x00000000e2180000,0x00000000e2580000)
+ ParOldGen       total 65536K, used 0K [0x00000000a1c00000, 0x00000000a5c00000, 0x00000000e0980000)
+  object space 65536K, 0% used [0x00000000a1c00000,0x00000000a1c00000,0x00000000a5c00000)
+ Metaspace       used 781K, capacity 1092K, committed 1152K, reserved 1060864K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011ef0000,0x00000000121f0000] byte_map_base: 0x00000000119e2000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a2ea5b0
+ Begin Bits: [0x00000000127f0000, 0x0000000013f80000)
+ End Bits:   [0x0000000013f80000, 0x0000000015710000)
+
+Polling page: 0x00000000010d0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002b30000, 0x0000000002da0000, 0x0000000011b30000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.031 loading class java/lang/Short
+Event: 0.031 loading class java/lang/Short done
+Event: 0.031 loading class java/lang/Integer
+Event: 0.031 loading class java/lang/Integer done
+Event: 0.031 loading class java/lang/Long
+Event: 0.031 loading class java/lang/Long done
+Event: 0.032 loading class java/lang/NullPointerException
+Event: 0.032 loading class java/lang/NullPointerException done
+Event: 0.032 loading class java/lang/ArithmeticException
+Event: 0.032 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff62b800000 - 0x00007ff62b837000 	C:\Program Files\Java\jdk1.8.0_66\bin\java.exe
+0x00007ffb65bd0000 - 0x00007ffb65d7c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb63e40000 - 0x00007ffb63f7e000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffb61ec0000 - 0x00007ffb61fd5000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffb606d0000 - 0x00007ffb6075e000 	C:\Windows\system32\apphelp.dll
+0x00007ffb4d110000 - 0x00007ffb4d163000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffb62530000 - 0x00007ffb625da000 	C:\Windows\system32\msvcrt.dll
+0x00007ffb61880000 - 0x00007ffb618ae000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x00007ffb63d70000 - 0x00007ffb63dc4000 	C:\Windows\system32\SHLWAPI.dll
+0x00007ffb61fe0000 - 0x00007ffb62157000 	C:\Windows\system32\USER32.dll
+0x00007ffb62200000 - 0x00007ffb62394000 	C:\Windows\system32\ole32.dll
+0x00007ffb62850000 - 0x00007ffb63d69000 	C:\Windows\system32\SHELL32.dll
+0x00007ffb61050000 - 0x00007ffb61071000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffb625e0000 - 0x00007ffb6268a000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffb542f0000 - 0x00007ffb5430e000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ffb623e0000 - 0x00007ffb62521000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffb63dd0000 - 0x00007ffb63e29000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ffb645f0000 - 0x00007ffb64801000 	C:\Windows\SYSTEM32\combase.dll
+0x00007ffb641f0000 - 0x00007ffb6433f000 	C:\Windows\system32\GDI32.dll
+0x00007ffb61ab0000 - 0x00007ffb61ac5000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffb5ef50000 - 0x00007ffb5f002000 	C:\Windows\SYSTEM32\SHCORE.dll
+0x00007ffb623a0000 - 0x00007ffb623d6000 	C:\Windows\system32\IMM32.DLL
+0x00007ffb62690000 - 0x00007ffb627e2000 	C:\Windows\system32\MSCTF.dll
+0x00007ffb5eab0000 - 0x00007ffb5ed2a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17810_none_6240b9c7ecbd0bda\COMCTL32.dll
+0x0000000059a00000 - 0x0000000059ad2000 	C:\Program Files\Java\jdk1.8.0_66\jre\bin\msvcr100.dll
+0x0000000059ae0000 - 0x000000005a369000 	C:\Program Files\Java\jdk1.8.0_66\jre\bin\server\jvm.dll
+0x00007ffb47e60000 - 0x00007ffb47e69000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffb5def0000 - 0x00007ffb5df12000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb5a780000 - 0x00007ffb5a78a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffb62190000 - 0x00007ffb62197000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffb621a0000 - 0x00007ffb621fa000 	C:\Windows\system32\WS2_32.dll
+0x00007ffb5dec0000 - 0x00007ffb5deea000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffb64340000 - 0x00007ffb64349000 	C:\Windows\system32\NSI.dll
+0x00007ffb61b80000 - 0x00007ffb61bcf000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ffb608b0000 - 0x00007ffb608d8000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x00000000599b0000 - 0x00000000599bf000 	C:\Program Files\Java\jdk1.8.0_66\jre\bin\verify.dll
+0x0000000059980000 - 0x00000000599a9000 	C:\Program Files\Java\jdk1.8.0_66\jre\bin\java.dll
+0x0000000059960000 - 0x0000000059976000 	C:\Program Files\Java\jdk1.8.0_66\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: projectdiyawaraimplementation.ProjectDiyawaraImplementation
+java_class_path (initial): F:\project video\java connector\mysql-connector-java-5.1.38\mysql-connector-java-5.1.38-bin.jar;F:\project video\java connector\jcalendar-1.4.jar;F:\project video\java connector\rs2xml.jar;C:\Users\Kasun\Downloads\rs2xml.jar;F:\project video\java connector\jfreechart-1.0.19.jar;F:\project video\java connector\jfreechart-1.0.19\jfreechart-1.0.19\jfreechart-1.0.19-demo.jar;F:\project video\java connector\WeatherLibrary.jar;F:\project video\java connector\New folder\WeatherLibrary.jar;C:\Users\Kasun\Documents\NetBeansProjects\ProjectDiyawaraImplementation\build\classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Dell\DW WLAN Card;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Java\jdk1.6.0\bin;C:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin;C:\Program Files (x86)\Skype\Phone\;C:\Users\Kasun\AppData\Roaming\npm
+USERNAME=Kasun
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.17415)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 6176104k(905736k free), swap 9321832k(5508k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for windows-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 18:55:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Jun 12 19:33:50 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
